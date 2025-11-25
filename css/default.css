@@ -1,10 +1,15 @@
 
+/*
+	page settings
+*/
 body, html {
 	width: 100%;
 	height: 100%;
 	padding: 0px;
 	margin: 0;
 	margin-top: 1vh;
+	background-color: #eeeeee;
+	font-size: larger;
 }
 
 /*
@@ -31,14 +36,13 @@ body, html {
 	General content display
 */
 #content {
-	min-height: 100vh;
 	padding: 10px;
+	background-color: #ffffff;
 }
 
-.anchor-right {
-	margin-left: 0.5em;
-}
-
+/*
+	the navigaion bar
+*/
 #navbar {
 	margin-right: 4px;
 	width: 100%;
@@ -50,4 +54,59 @@ body, html {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: right;
+}
+#navbar-other > *::after {
+	content: ";";
+}
+#navbar > a {
+	flex: 1;
+}
+#navbar > div {
+	flex: 2;
+}
+
+/*
+	the basic page info
+*/
+#page {
+	min-height: 256px;
+}
+
+/*
+	the webring info
+*/
+#webring {
+	width: 100%;
+	margin-right: 4px;
+	display: flex;
+}
+#webring > * {
+	flex: 1;
+}
+#webring > div {
+	display: flex;
+	flex-direction: column;
+}
+
+/*
+	bottom-most window
+*/
+#links {
+	border-top: 1px solid black;
+	margin-top: 16px;
+}
+
+/*
+	simple classes
+*/
+.anchor-right {
+	float: right;
+	text-align: right;
+}
+.small-left-margin {
+	margin-left: 0.5em;
+}
+.anchor-center {
+	justify-self: center;
+	text-align: center;
 }

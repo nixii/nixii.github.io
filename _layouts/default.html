@@ -4,15 +4,20 @@
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" type="text/css" href="css/default.css">
+		{% if page.stylesheet != nil %}
+			<link rel="stylesheet" type="text/css" href="{{ page.stylesheet %}}">
+		{% endif %}
 	</head>
 	<body>
 		<div id="content">
 			<div id="navbar">
 				<a id="go-home" href="/">nixii.dev</a>
 				<div id="navbar-other">
-					<a class="anchor-right" href="/about-me">about me</a>
-					<a class="anchor-right" href="/blog">blog</a>
-					<a class="anchor-right" href="https://files.nixii.dev/">fileserver</a>
+					<a class="small-left-margin" href="/">home</a>
+					<a class="small-left-margin" href="/about-me">about me</a>
+					<a class="small-left-margin" href="/blog">blog</a>
+					<a class="small-left-margin" href="/tok">toki pona</a>
+					<a class="small-left-margin" href="https://files.nixii.dev/">fileserver</a>
 				</div>
 			</div>
 			<div id="page">
@@ -20,10 +25,15 @@
 			</div>
 			<div id="bottombar">
 				<div id="webring">
-
+					<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=nixii">← prev</a>
+					<div id="webring-center" class="anchor-center">
+						<a href="https://webring.bucketfish.me">🏳️‍🌈 bucket webring 🏳️‍🌈</a>
+						<a href="https://webring.bucketfish.me/redirect.html?to=random&name=nixii">random page</a>
+					</div>
+					<a class="anchor-right" href="https://webring.bucketfish.me/redirect.html?to=next&name=nixii">next →</a>
 				</div>
 				<div id="links">
-					
+					<p>you can find me on: <a href="https://github.com/nixii">GitHub</a>, <a href="https://discord.com">Discord (@nixii.dev)</a>, <a href="https://www.youtube.com/@liokit">YouTube</a></p>
 				</div>
 			</div>
 		</div>
