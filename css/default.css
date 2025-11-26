@@ -1,4 +1,6 @@
 
+@import url("./colors.css");
+
 /*
 	page settings
 */
@@ -8,8 +10,26 @@ body, html {
 	padding: 0px;
 	margin: 0;
 	margin-top: 1vh;
-	background-color: #eeeeee;
 	font-size: larger;
+}
+
+a {
+	color: var(--dark-greenish);
+}
+
+html {
+	background-color: #a1eb7f;
+	background-image: linear-gradient(315deg, var(--greenish) 0%, var(--off-white) 100%);
+	background-size: 25vh 25vh;
+	background-repeat: round;
+	background-position: 0px -10px;
+}
+
+/*
+	Things everything needs
+*/
+* {
+	font-weight: normal;
 }
 
 /*
@@ -36,8 +56,10 @@ body, html {
 	General content display
 */
 #content {
-	padding: 10px;
-	background-color: #ffffff;
+	padding: 16px;
+	background-color: var(--white);
+	filter: drop-shadow(4px 4px 4px black);
+	border-radius: 4px;
 }
 
 /*
@@ -47,6 +69,8 @@ body, html {
 	margin-right: 4px;
 	width: 100%;
 	display: flex;
+	border-bottom: 1px solid black;
+	padding-bottom: 16px;
 }
 #navbar-other {
 	flex: 1;
@@ -76,9 +100,12 @@ body, html {
 	the webring info
 */
 #webring {
+	box-sizing: border-box;
+	padding: 0.5rem;
 	width: 100%;
 	margin-right: 4px;
 	display: flex;
+	border: 1px solid black;
 }
 #webring > * {
 	flex: 1;
@@ -92,7 +119,6 @@ body, html {
 	bottom-most window
 */
 #links {
-	border-top: 1px solid black;
 	margin-top: 16px;
 }
 
