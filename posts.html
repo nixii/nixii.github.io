@@ -1,0 +1,23 @@
+---
+layout: default
+title: posts
+stylesheet: /css/posts-all.css
+---
+<h2>Posts list</h2>
+<p>All of my posts can be found here, in chronological order.</p>
+<br>
+<div id="posts">
+	{% for post in site.posts %}
+		<div class="post">
+			<div class="post-meta-bottom">
+				<div class="post-left">
+					<p>{{ post.date | date: "%-d %B, %Y" }}</p>
+				</div>
+				<div class="post-right">
+					<p>{{ post.title }}</p>
+					<a href="{{ post.url }}">read this post</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

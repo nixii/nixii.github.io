@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
-		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<link rel="stylesheet" type="text/css" href="/css/default.css">
+		<link rel="stylesheet" type="text/css" href="/css/general-classes.css">
 		{% if page.stylesheet != nil %}
-			<link rel="stylesheet" type="text/css" href="{{ page.stylesheet %}}">
+			<link rel="stylesheet" type="text/css" href="{{ page.stylesheet }}">
 		{% endif %}
 	</head>
 	<body>
@@ -15,7 +16,7 @@
 				<div id="navbar-other">
 					<a class="small-left-margin" href="/">home</a>
 					<a class="small-left-margin" href="/about-me">about me</a>
-					<!-- <a class="small-left-margin" href="/blog">blog</a> -->
+					<a class="small-left-margin" href="/posts">posts</a>
 					<a class="small-left-margin" href="/music">music</a>
 					<a class="small-left-margin" href="/tok">toki pona</a>
 					<a class="small-left-margin" href="https://files.nixii.dev/">fileserver</a>

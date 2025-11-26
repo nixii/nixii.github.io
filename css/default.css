@@ -30,6 +30,15 @@ html {
 */
 * {
 	font-weight: normal;
+	box-sizing: border-box;
+}
+
+/*
+	element styles
+*/
+h3 {
+	color: gray;
+	text-decoration: underline;
 }
 
 /*
@@ -105,8 +114,10 @@ html {
 	padding: 0.5rem;
 	width: 100%;
 	margin-right: 4px;
+	margin-top: 32px;
 	display: flex;
 	border: 1px solid black;
+	align-items: center;
 }
 #webring > * {
 	flex: 1;
@@ -132,16 +143,20 @@ html {
 }
 
 /*
-	simple classes
+	load posts
 */
-.anchor-right {
-	float: right;
-	text-align: right;
-}
-.small-left-margin {
-	margin-left: 0.5em;
-}
-.anchor-center {
-	justify-self: center;
+.post-date {
+	font-style: italic;
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: medium;
 	text-align: center;
+}
+.post-title {
+	margin-bottom: 0px;
+	text-align: center;
+}
+.post-return {
+	font-style: italic;
+	font-size: medium;
 }

@@ -1,0 +1,72 @@
+
+/* list of good items */
+#good-by-others {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* a music element item */
+.music-element {
+	text-align: center;
+	border: 2px solid var(--greenish);
+	margin-bottom: 16px;
+}
+
+/* sizing based on screen size */
+@media (min-aspect-ratio: 16 / 12) {
+	.music-element {
+		width: 45%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (max-aspect-ratio: 16 / 12) {
+	.music-element {
+		width: 100%;
+	}
+}
+
+/* good margin */
+.music-element > * {
+	margin: 4px;
+}
+
+/* the type of the element */
+.music-element-type {
+	width: 100%;
+	color: gray;
+}
+
+/* say what kind of item it is */
+.music-element-type.album::after {
+	content: "ALBUM";
+}
+.music-element-type.track::after {
+	content: "TRACK";
+}
+
+/* display for music elements */
+.music-element > img {
+	max-width: 90%;
+	max-height: 90%;
+	display: block;
+	margin: auto;
+	filter: drop-shadow(1px 1px 2px black);
+}
+.music-element > .album-name {
+	font-size: xx-large;
+}
+.music-element > .album-author {
+	font-size: medium;
+	font-style: italic;
+	margin-bottom: 16px;
+}
+.music-element > .blurb {
+	text-align: justify;
+	padding: 30px;
+	padding-bottom: 8px;
+}
+.music-element > a {
+	padding-bottom: 8px;
+}

@@ -1,0 +1,43 @@
+
+#posts {
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+}
+
+.post {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid var(--greenish);
+}
+
+.post-meta-top {
+	display: flex;
+	flex-direction: row;
+}
+.post-meta-bottom {
+	display: flex;
+	flex-direction: row;
+	margin: 0px;
+}
+.post-right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 32px;
+}
+.post-tag {
+	padding: 4px;
+	font-size: small;
+	width: fit-content;
+	font-family: monospace;
+	margin-right: 16px;
+}
+.post-tag::before {
+	content: "/";
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+}

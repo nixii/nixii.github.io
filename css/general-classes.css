@@ -1,0 +1,45 @@
+
+/*
+	single rules
+*/
+.flexbox { display: flex; }
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-4 { flex: 4; }
+
+.italic { font-style: italic; }
+.bold { font-weight: bold; }
+
+.small-left-margin { margin-left: 0.5em; }
+
+.monospace { font-family: monospace; }
+.p { text-align: justify; }
+
+/*
+	simple classes
+*/
+.anchor-right {
+	float: right;
+	text-align: right;
+}
+.anchor-center {
+	justify-self: center;
+	text-align: center;
+}
+
+/*
+	Screen width-specific
+*/
+/*
+	The display for the site on larger screens, like laptops
+*/
+@media (min-aspect-ratio: 1/1) {
+	.p { text-indent: 4em; }
+}
+
+/*
+	The display for the site on smaller screens, like phones
+*/
+@media (max-aspect-ratio: 1/1) {
+	.p { text-indent: 2em; }
+}
