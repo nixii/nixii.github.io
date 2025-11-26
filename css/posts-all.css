@@ -38,6 +38,12 @@
 	content: "/";
 }
 
+.post-lang {
+	font-family: monospace;
+	text-indent: 2em;
+	font-weight: bold;
+}
+
 p {
 	margin: 0px;
 	padding: 0px;
