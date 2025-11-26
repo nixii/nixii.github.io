@@ -124,6 +124,14 @@ html {
 }
 
 /*
+	copyright notice
+*/
+#copyright > p {
+	font-size: medium;
+	font-style: italic;
+}
+
+/*
 	simple classes
 */
 .anchor-right {
