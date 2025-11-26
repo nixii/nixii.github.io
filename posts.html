@@ -8,13 +8,17 @@ stylesheet: /css/posts-all.css
 <br>
 <div id="posts">
 	{% for post in site.posts %}
+		{% assign titleclass = "nf" %}
+		{% if post.title_class != nil %}
+			{% assign titleclass = post.title_class %}
+		{% endif %}
 		<div class="post">
 			<div class="post-meta-bottom">
 				<div class="post-left">
 					<p>{{ post.date | date: "%-d %B, %Y" }}</p>
 				</div>
 				<div class="post-right">
-					<p>{{ post.title }}</p>
+					<p class="{{ titleclass }}">{{ post.title }}</p>
 					<a href="{{ post.url }}">read this post</a>
 				</div>
 			</div>

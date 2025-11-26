@@ -9,6 +9,7 @@
 	width: 100%;
 	padding: 8px;
 	border: 1px solid var(--greenish);
+	margin-top: 8px;
 }
 
 .post-meta-top {

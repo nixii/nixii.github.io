@@ -1,5 +1,13 @@
 
 /*
+	fonts
+*/
+@font-face {
+	font-family: 'sitelen-pona';
+	src: url('/assets/fonts/sitelen-pona.ttf');
+}
+
+/*
 	single rules
 */
 .flexbox { display: flex; }
@@ -14,6 +22,8 @@
 
 .monospace { font-family: monospace; }
 .p { text-align: justify; }
+.sp { font-family: "sitelen-pona"; }
+.nf { font-family: serif; }
 
 /*
 	simple classes

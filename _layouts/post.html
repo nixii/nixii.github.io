@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
+{% assign titleclass = "nf" %}
+{% if page.title_class != nil %}
+	{% assign titleclass = page.title_class %}
+{% endif %}
 <a href="/posts" class="post-return">← back to all posts</a>
-<h1 class="post-title">{{ page.title }}</h1>
+<h1 class="post-title {{ titleclass }}">{{ page.title }}</h1>
 <p class="post-date">Written {{ page.date | date: "%-d %B, %Y" }}</p>
 {{ content }}
