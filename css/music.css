@@ -14,14 +14,14 @@
 }
 
 /* sizing based on screen size */
-@media (min-aspect-ratio: 16 / 12) {
+@media (min-aspect-ratio: 1/1) {
 	.music-element {
 		width: 45%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
-@media (max-aspect-ratio: 16 / 12) {
+@media (max-aspect-ratio: 1/1) {
 	.music-element {
 		width: 100%;
 	}

@@ -1,0 +1,80 @@
+/* <div class="project-list">
+	<div class="project-element">
+		<img class="project-image" alt="an example of swapping items onto the helmet slot." src="/assets/img/projects/ManyHats/example0.gif">
+		<div class="project-info">
+			<h1>ManyHats</h1>
+			<p>This is a plugin for Minecraft servers that lets you swap any item you want onto your helmet slot.</p>
+			<a class="project-page" href="/projects/ManyHats"></a>
+			<a class="project-github" href="https://github.com/nixii/ManyHats"></a>
+		</div>
+	</div>
+</div> */
+
+.project-list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	display: block;
+}
+
+/* give the elements borders */
+.project-element {
+	width: 100%;
+	border: 2px solid var(--greenish);
+	display: flex;
+	margin-top: 8px;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.project-info {
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	flex: 1;
+}
+
+.project-info > p {
+	text-indent: 4em;
+	flex: 1;
+}
+
+.project-info > h1 {
+	margin-bottom: 0px;
+}
+
+.project-page::after {
+	content: "View the project's page";
+}
+.project-github::after {
+	content: "View the source on GitHub";
+}
+
+.project-image {
+	filter: drop-shadow(1px 1px 2px black);
+}
+
+/* wide-screen */
+@media (min-aspect-ratio: 1/1) {
+	.project-image {
+		height: 25vh;
+		margin: auto;
+	}
+
+	.project-element {
+		min-height: 25vh;
+	}
+}
+
+/* tall-screen */
+@media (max-aspect-ratio: 1/1) {
+	.project-element {
+		min-height: 50vh;
+		flex-direction: column;
+	}
+	.project-image {
+		width: 40%;
+		margin: auto;
+		margin-top: 8px;
+	}
+}
