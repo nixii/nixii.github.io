@@ -70,3 +70,10 @@
 .music-element > a {
 	padding-bottom: 8px;
 }
+
+/* my music */
+#my-music {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
