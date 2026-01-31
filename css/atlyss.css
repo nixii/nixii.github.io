@@ -103,16 +103,11 @@ html {
 }
 
 
-.tab > h2, h3 {
+.tab {
 	text-align: center;
 }
-
-.vsplit {
-	display: flex;
-	flex-direction: row;
-}
-.equal-flex {
-	flex: 1;
+input {
+	margin-bottom: 16px;
 }
 
 option {

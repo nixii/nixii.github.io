@@ -3,39 +3,55 @@ var build = {
 	species: 'none',
 	class: 'none',
 	subclass: 'none',
-	minLevel: 1,
 
 	equipment: {
 		weapons: {
-			primary: 'none',
-			secondary: 'none',
+			primary: {
+				id: 'none',
+				enchantment: 'none'
+			},
+			secondary: {
+				id: 'none',
+				enchantment: 'none'
+			},
 		},
-		ring: 'none',
-		side: 'none',
-		helmet: 'none',
-		chestpiece: 'none',
-		leggings: 'none'
+		ring: {
+			id: 'none',
+			enchantment: 'none'
+		},
+		side: {
+			id: 'none',
+			enchantment: 'none'
+		},
+		helmet: {
+			id: 'none',
+			enchantment: 'none'
+		},
+		chestpiece: {
+			id: 'none',
+			enchantment: 'none'
+		},
+		leggings: {
+			id: 'none',
+			enchantment: 'none'
+		}
 	},
 
+	level: 40,
+
 	attributes: {
+		pointsLeft: 123,
+		pointsSpent: 0,
+
 		strength: 0,
 		mind: 0,
 		dexterity: 0,
 		vitality: 0
 	},
 
-	stats: {
-		health: 0,
-		mana: 0,
-		stamina: 0,
-		attackPower: 0,
-		dexPower: 0,
-		magicPower: 0,
-		physCrit: 0,
-		magicCrit: 0,
-		defense: 0,
-		magicDefense: 0,
-		evasion: 0,
-		moveSpeed: 0,
-	},
+	skills: {
+		pointsLeft: 60,
+		pointsSpent: 0,
+		skills: [],
+	}
 };
