@@ -1,0 +1,139 @@
+:root {
+	--dark-cyan: rgb(43, 82, 86);
+	--light-cyan: rgb(131, 192, 188);
+	--lighter-cyan: rgb(198, 234, 232);
+	--fg: rgb(14, 20, 30);
+}
+
+@font-face {
+	font-family: 'Terminal Grotesque';
+	src: url("/assets/fonts/TerminalGrotesque.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'OldStyle 1';
+	src: url("/assets/fonts/OldStyle1.ttf") format("truetype");
+}
+
+body, html {
+	font-family: 'Terminal Grotesque', monospace;
+
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+h1, a {
+	font-family: 'OldStyle 1';
+	color: var(--fg);
+}
+
+html {
+	background-color: var(--dark-cyan);
+	background-image: linear-gradient(315deg, var(--dark-cyan) 0%, var(--light-cyan) 100%);
+	background-size: 25vh 25vh;
+	background-repeat: round;
+	background-position: 0px -10px;
+
+	scroll-behavior: smooth;
+}
+
+#go-back-home {
+	position: absolute;
+}
+
+#content {
+	width: 40%;
+	background-color: var(--lighter-cyan);
+	color: var(--fg);
+	margin: auto;
+	margin-top: 8vh;
+
+	padding: 16px;
+	filter: drop-shadow(4px 4px 4px black);
+	border-radius: 4px;
+}
+
+#content > h1 {
+	text-align: center;
+}
+#content > h3 {
+	text-align: center;
+	font-style: italic;
+	color: var(--dark-cyan);
+	width: 100%;
+}
+
+#tabs {
+	width: 100%;
+	height: 100%;
+}
+
+#tab-list {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border-bottom: 1px solid var(--dark-cyan);
+	border-top: 1px solid var(--dark-cyan);
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#tab-list > a {
+	flex: 1;
+	text-align: center;
+	color: var(--fg);
+	font-size: larger;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.tab {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.tab:target {
+	display: block;
+}
+#tab-information {
+	display: block;
+}
+.tab:target ~ #tab-information {
+	display: none;
+}
+
+
+.tab > h2, h3 {
+	text-align: center;
+}
+
+.vsplit {
+	display: flex;
+	flex-direction: row;
+}
+.equal-flex {
+	flex: 1;
+}
+
+option {
+	font-family: 'Terminal Grotesque';
+}
+
+#subclass-choice-uhoh {
+	display: block;
+}
+#subclass-choice-bandit,
+#subclass-choice-fighter,
+#subclass-choice-mystic {
+	display: none;
+}
+#class-choice-bandit:checked ~ #subclass-choice-bandit,
+#class-choice-fighter:checked ~ #subclass-choice-fighter,
+#class-choice-mystic:checked ~ #subclass-choice-mystic {
+	display: block;
+}
+#class-choice-bandit:checked ~ #subclass-choice-uhoh,
+#class-choice-fighter:checked ~ #subclass-choice-uhoh,
+#class-choice-mystic:checked ~ #subclass-choice-uhoh {
+	display: none;
+}
