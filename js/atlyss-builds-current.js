@@ -4,6 +4,9 @@ var build = {
 	class: 'none',
 	subclass: 'none',
 
+	name: '',
+	description: '',
+
 	equipment: {
 		weapons: {
 			primary: {
@@ -40,18 +43,24 @@ var build = {
 	level: 40,
 
 	attributes: {
-		pointsLeft: 123,
-		pointsSpent: 0,
+		totalPoints: 123,
+		spentPoints: 0,
 
-		strength: 0,
-		mind: 0,
-		dexterity: 0,
-		vitality: 0
+		strength: 1,
+		mind: 1,
+		dexterity: 1,
+		vitality: 1
 	},
 
 	skills: {
-		pointsLeft: 60,
-		pointsSpent: 0,
+		totalPoints: 60,
+		spentPoints: 0,
 		skills: [],
 	}
 };
+
+// Load the build
+function loadBuild() {
+	numbers.maxAttributePoints.innerHTML = build.attributes.totalPoints;
+	numbers.spentAttributePoints.innerHTML = build.attributes.spentPoints;
+}

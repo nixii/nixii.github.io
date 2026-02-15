@@ -24,6 +24,40 @@ title: atlyss build creator
 				<div id="tab-content">
 					<div id="tab-stats" class="tab">
 						<h2>Stats</h2>
+
+						<div class="vsplit">
+							<div class="equal-flex aligned-items">
+								<h3>Attributes</h3>
+								<p>These are all the attributes you will put points into in-game.</p><br>
+
+								<h3>Points</h3>
+								<p>Maximum points: <span id="maximum-attribute-points">nil</span><br>Spent points: <span id="spent-attribute-points">nil</span></span></p>
+
+								<div class="form-group">
+								<label for="strength">Strength</label>
+								<input id="strength-attribute" name="strength" placeholder="1, 2,..." value="1" type="number"><br>
+								</div>
+
+								<div class="form-group">
+								<label for="mind">Mind</label>
+								<input id="mind-attribute" name="mind" placeholder="1, 2,..." value="1" type="number"><br>
+								</div>
+
+								<div class="form-group">
+								<label for="dexterity">Dexterity</label>
+								<input id="dexterity-attribute" name="dexterity" placeholder="1, 2,..." value="1" type="number"><br>
+								</div>
+
+								<div class="form-group">
+								<label for="vitality">Vitality</label>
+								<input id="vitality-attribute" name="vitality" placeholder="1, 2,..." value="1" type="number"><br>
+								</div>
+							</div>
+							<div class="equal-flex">
+								<h3>Calculated Values</h3>
+								<p>All these values will be calculated with the attributes you put in.</p><br>
+							</div>
+						</div>
 					</div>
 					<div id="tab-equipment" class="tab">
 						<h2>Equipment</h2>
@@ -36,6 +70,12 @@ title: atlyss build creator
 					</div>
 					<div id="tab-information" class="tab">
 						<h2>Information</h2>
+
+						<h3>Name</h3>
+						<input type="text" id="name-input" name="name" placeholder="Enter name here...">
+
+						<h3>Description</h3>
+						<textarea rows="4" id="description-input" name="description" placeholder="Enter description here..."></textarea>
 
 						<h3>Species</h3>
 						<label><input type="radio" name="species-choice" value="byrdle"> Byrdle</label>
@@ -66,8 +106,8 @@ title: atlyss build creator
 				</div>
 			</div>
 		</div>
-		<script src="/js/atlyss-builds-current.js"></script>
 		<script src="/js/atlyss-builds-constants.js"></script>
+		<script src="/js/atlyss-builds-current.js"></script>
 		<script src="/js/atlyss-builds.js"></script>
 	</body>
 </html>

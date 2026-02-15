@@ -3,7 +3,7 @@
 var saved = true;
 
 // Connect all race radio buttons
-speciesRadioButtons.forEach(speciesRadio => {
+radioButtons.species.forEach(speciesRadio => {
 	speciesRadio.addEventListener('change', function() {
 		if (!this.checked) return;
 		build.species = this.value;
@@ -12,7 +12,7 @@ speciesRadioButtons.forEach(speciesRadio => {
 });
 
 // Connect all class radio buttons
-classRadioButtons.forEach(classRadio => {
+radioButtons.classes.forEach(classRadio => {
 	classRadio.addEventListener('change', function() {
 		if (!this.checked) return;
 		build.class = this.value;
@@ -21,12 +21,21 @@ classRadioButtons.forEach(classRadio => {
 });
 
 // Connect all subclass radio buttons
-subclassRadioButtons.forEach(subclassRadio => {
+radioButtons.subclasses.forEach(subclassRadio => {
 	subclassRadio.addEventListener('change', function() {
 		if (!this.checked) return;
 		build.subclass = this.value;
 		saved = false;
 	});
+});
+
+// Name and description input
+inputs.name.addEventListener('input', function() {
+	build.name = this.value;
+	saved = false;
+});
+inputs.description.addEventListener('input', function() {
+	build.name 
 });
 
 // Save check
@@ -35,3 +44,6 @@ window.addEventListener('beforeunload', function(e) {
 		e.preventDefault();
 	}
 });
+
+// Load values
+loadBuild();

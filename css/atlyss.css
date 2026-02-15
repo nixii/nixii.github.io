@@ -49,6 +49,7 @@ html {
 	margin-top: 8vh;
 
 	padding: 16px;
+	margin-bottom: 20%;
 	filter: drop-shadow(4px 4px 4px black);
 	border-radius: 4px;
 }
@@ -102,16 +103,23 @@ html {
 	display: none;
 }
 
-
-.tab {
-	text-align: center;
-}
-input {
+input, textarea {
 	margin-bottom: 16px;
+	font-family: 'Terminal Grotesque';
+	font-size: large;
 }
 
 option {
 	font-family: 'Terminal Grotesque';
+}
+
+.vsplit {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+.equal-flex {
+	flex: 1;
 }
 
 #subclass-choice-uhoh {
@@ -131,4 +139,9 @@ option {
 #class-choice-fighter:checked ~ #subclass-choice-uhoh,
 #class-choice-mystic:checked ~ #subclass-choice-uhoh {
 	display: none;
+}
+
+.form-group > input {
+	width: 60px;
+	height: 30px;
 }
