@@ -7,10 +7,9 @@
 }
 
 :root {
-        --left-content-bg: #e7e7e7;
-        --right-content-bg: #ffffff;
-        --body-border-color: #ffffff;
-        --body-bg: #37bcff;
+        --light-border: #ffffff;
+        --dark-border: #000000;
+        --bg-color: #d1d1d1;
 }
 
 /*
@@ -39,8 +38,8 @@ body, html {
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        background-color: #f4f4f4;
-        box-shadow: 8px 8px #00000050;
+        background-color: var(--bg-color);
+        /* box-shadow: 8px 8px #00000050; */
 }
 
 /*
@@ -50,7 +49,7 @@ body, html {
         display: flex;
         flex-direction: row;
         flex: 1;
-        background-color: #ffffff;
+        background-color: var(--bg-color);
         margin: 4px;
 }
 
@@ -100,7 +99,7 @@ body, html {
 */
 #left {
         min-width: 20%;
-        background-color: #e6e6e6;
+        background-color: var(--bg-color);
         display: flex;
         flex-direction: column;
 }
@@ -112,7 +111,7 @@ body, html {
         width: 100%;
         margin-bottom: 8px;
         box-sizing: border-box;
-        background-color: #ffffff;
+        background-color: var(--bg-color);
         padding: 4px;
 }
 
@@ -162,11 +161,11 @@ body, html {
  * a hovered button
 */
 .inset, .button-border:hover {
-        background-color: #e6e6e6;
-        border-top: 4px solid #bdbdbd;
-        border-left: 4px solid #bdbdbd;
-        border-bottom: 4px solid #ffffff;
-        border-right: 4px solid #ffffff;
+        background-color: var(--bg-color);
+        border-top: 4px solid var(--dark-border);
+        border-left: 4px solid var(--dark-border);
+        border-bottom: 4px solid var(--light-border);
+        border-right: 4px solid var(--light-border);
 }
 
 /*
@@ -174,11 +173,11 @@ body, html {
  * an unhovered button
 */
 .outset, .button-border {
-        background-color: #ffffff;
-        border-top: 4px solid #ffffff;
-        border-left: 4px solid #ffffff;
-        border-bottom: 4px solid #bdbdbd;
-        border-right: 4px solid #bdbdbd;
+        background-color: var(--bg-color);
+        border-top: 4px solid var(--light-border);
+        border-left: 4px solid var(--light-border);
+        border-bottom: 4px solid var(--dark-border);
+        border-right: 4px solid var(--dark-border);
 }
 
 /*
