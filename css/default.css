@@ -1,4 +1,11 @@
 
+@font-face {
+        font-family: 'Trident9x16';
+        src: url("/fonts/Trident9x16.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+}
+
 :root {
         --left-content-bg: #e7e7e7;
         --right-content-bg: #ffffff;
@@ -17,7 +24,8 @@ body, html {
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;
-        font-family: monospace;
+        font-family: "Trident9x16";
+        font-size: 1.2em;
 }
 
 #window {
@@ -51,7 +59,16 @@ body, html {
 #left {
         min-width: 20%;
         background-color: #e6e6e6;
-        
+        display: flex;
+        flex-direction: column;
+}
+
+#left > a {
+        width: 100%;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        padding: 4px;
 }
 
 #topbar {
@@ -60,7 +77,6 @@ body, html {
         margin: 4px;
         display: flex;
         flex-direction: row;
-        font-size: 1.4em;
         align-items: center;
 }
 
@@ -74,13 +90,14 @@ body, html {
 
 #right-topbar > button {
         background-color: #e6e6e6;
-        font-size: 80%;
+        text-align: right;
         color: black;
         margin-left: 8px;
         height: 32px;
         width: 32px;
-        
         aspect-ratio: 1/1;
+        font-family: 'Trident9x16', monospace;
+        font-size: 1.5cqw;
 }
 
 .inset {
@@ -96,7 +113,15 @@ body, html {
         border-bottom: 4px solid #bdbdbd;
         border-right: 4px solid #bdbdbd;
 }
-button.outset:hover {
+
+
+.button-border {
+        border-top: 4px solid #ffffff;
+        border-left: 4px solid #ffffff;
+        border-bottom: 4px solid #bdbdbd;
+        border-right: 4px solid #bdbdbd;
+}
+.button-border:hover {
         border-top: 4px solid #bdbdbd;
         border-left: 4px solid #bdbdbd;
         border-bottom: 4px solid #ffffff;

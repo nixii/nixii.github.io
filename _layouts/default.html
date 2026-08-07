@@ -21,16 +21,19 @@
         <a>View</a>
         </div>
         <div id="right-topbar">
-                <button class="outset">O</button>
-                <button class="outset">X</button>
+                <button class="button-border" onclick="window.location.href='/about';">?</button>
+                <button class="button-border" onclick="window.location.href='/';">/</button>
         </div>
 </div>
 
 
 <div id="content">
 <div id="left" class="inset">
-        <a href="/">Home</a>
-        <a href="/about"></a>
+        <p>Pages</p>
+        <a href="/" class="button-border">Home</a>
+        <a href="/about" class="button-border">About</a>
+        <a href="/music" class="button-border">My Music</a>
+        <a href="/books" class="button-border">Books I've Read</a>
 </div>
 <div id="right" class="inset">
         {{ page.content }}
