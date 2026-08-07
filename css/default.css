@@ -203,3 +203,28 @@ h1 {
 Underline {
         text-decoration: underline;
 }
+
+/*
+ * full width
+*/
+.full-width {
+        width: 100%;
+}
+
+/*
+ * pixel image
+*/
+.pixel-image {
+        image-rendering: pixelated;
+        display: block;
+}
+
+/*
+ * margins
+*/
+.no-margin { margin: 0px; }
+
+/*
+ * padding
+*/
+.no-pad { padding: 0px; }
