@@ -28,8 +28,10 @@ body, html {
         font-size: 1.2em;
 }
 
+/*
+ * the entire window's settings
+*/
 #window {
-        width: 60vw;
         height: 90vh;
         margin: auto;
         margin-top: 5vh;
@@ -41,6 +43,9 @@ body, html {
         box-shadow: 8px 8px #00000050;
 }
 
+/*
+ * the content part of the window
+*/
 #content {
         display: flex;
         flex-direction: row;
@@ -49,14 +54,50 @@ body, html {
         margin: 4px;
 }
 
+/*
+ * organize on laptop
+*/
+@media (orientation: landscape) {
+        #content {
+                flex-direction: row;
+        }
+
+        #window {
+                width: 60vw;
+        }
+}
+
+/*
+ * organize on a phone
+*/
+@media (orientation: portrait) {
+        #content {
+                flex-direction: column;
+        }
+
+        #window {
+                width: 90vw;
+        }
+}
+
+/*
+ * add some basic padding to all the parts
+*/
 #left, #right, #topbar {
         padding: 8px;
 }
 
+/*
+ * the right side takes the most space
+*/
 #right {
         flex: 1;
 }
 
+/*
+ * the left side needs some width.
+ * all buttons in a column.
+*/
 #left {
         min-width: 20%;
         background-color: #e6e6e6;
@@ -64,6 +105,9 @@ body, html {
         flex-direction: column;
 }
 
+/*
+ * all the links cover the whole width.
+*/
 #left > a {
         width: 100%;
         margin-bottom: 8px;
@@ -72,6 +116,9 @@ body, html {
         padding: 4px;
 }
 
+/*
+ * the top bar is a gradient and is horizonally organized.
+*/
 #topbar {
         background: linear-gradient(270deg,rgba(46, 154, 255, 1) 0%, rgba(0, 19, 189, 1) 100%);
         /* background-color: #002cde; */
@@ -82,16 +129,24 @@ body, html {
         align-items: center;
 }
 
+/*
+ * the left of the top bar takes majority of the space
+*/
 #left-topbar {
         flex: 1;
 }
 
+/*
+ * the right topbar is a horizontal container
+*/
 #right-topbar {
         display: flex;
 }
 
+/*
+ * all the buttons on the topbar are buttons
+*/
 #right-topbar > button {
-        background-color: #e6e6e6;
         text-align: right;
         color: black;
         margin-left: 8px;
@@ -99,33 +154,41 @@ body, html {
         width: 32px;
         aspect-ratio: 1/1;
         font-family: 'Trident9x16', monospace;
-        font-size: 1.5cqw;
+        font-size: 24px;
 }
 
-.inset {
+/*
+ * inset something
+ * a hovered button
+*/
+.inset, .button-border:hover {
+        background-color: #e6e6e6;
         border-top: 4px solid #bdbdbd;
         border-left: 4px solid #bdbdbd;
         border-bottom: 4px solid #ffffff;
         border-right: 4px solid #ffffff;
 }
 
-.outset {
+/*
+ * outset something
+ * an unhovered button
+*/
+.outset, .button-border {
+        background-color: #ffffff;
         border-top: 4px solid #ffffff;
         border-left: 4px solid #ffffff;
         border-bottom: 4px solid #bdbdbd;
         border-right: 4px solid #bdbdbd;
 }
 
-
-.button-border {
-        border-top: 4px solid #ffffff;
-        border-left: 4px solid #ffffff;
-        border-bottom: 4px solid #bdbdbd;
-        border-right: 4px solid #bdbdbd;
-}
-.button-border:hover {
-        border-top: 4px solid #bdbdbd;
-        border-left: 4px solid #bdbdbd;
-        border-bottom: 4px solid #ffffff;
-        border-right: 4px solid #ffffff;
+/*
+ * all h1 titles
+*/
+h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        box-sizing: border-box;
+        padding: 8px;
+        text-align: center;
 }
