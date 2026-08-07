@@ -1,0 +1,75 @@
+
+:root {
+        --left-content-bg: #e7e7e7;
+        --right-content-bg: #ffffff;
+        --body-border-color: #ffffff;
+        --body-bg: #37bcff;
+}
+
+/*
+ * set up the page
+*/
+body, html {
+        padding: none;
+        margin: 0px;
+        overflow: hidden;
+        background-image: url("/img/aero.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        font-family: monospace;
+}
+
+#window {
+        width: 60vw;
+        height: 90vh;
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #f4f4f4;
+}
+
+#content {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        background-color: #ffffff;
+        margin: 4px;
+}
+
+#left, #right, #topbar {
+        padding: 8px;
+}
+
+#right {
+        flex: 1;
+}
+
+#left {
+        min-width: 200px;
+        background-color: #e6e6e6;
+        
+}
+
+#topbar {
+        background-color: #002cde;
+        color: white;
+        margin: 4px;
+}
+
+.inset {
+        border-top: 4px solid #bdbdbd;
+        border-left: 4px solid #bdbdbd;
+        border-bottom: 4px solid #ffffff;
+        border-right: 4px solid #ffffff;
+}
+
+.outset {
+        border-top: 4px solid #ffffff;
+        border-left: 4px solid #ffffff;
+        border-bottom: 4px solid #bdbdbd;
+        border-right: 4px solid #bdbdbd;
+}

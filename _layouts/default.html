@@ -2,8 +2,35 @@
 <head lang="en">
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
+        {% if page.theme %}
+                <link href="{{ page.theme }}" rel="stylesheet" type="text/css" />
+        {% else %}
+                <link href="/css/themes/primary.css" rel="stylesheet" type="text/css" />
+        {% endif %}
+        <link href="/css/default.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-        <h1>default</h1>
-        {{ content }}
+<div id="window" class="outset">
+
+
+
+<div id="topbar">
+        <a>File</a>
+        <a>View</a>
+</div>
+
+
+<div id="content">
+<div id="left" class="inset">
+        <a href="/">Home</a>
+        <a href="/about"></a>
+</div>
+<div id="right" class="inset">
+        {{ page.content }}
+</div>
+</div>
+
+
+</div>
 </body>
