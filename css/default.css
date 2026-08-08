@@ -6,12 +6,6 @@
         font-style: normal;
 }
 
-:root {
-        --light-border: #ffffff;
-        --dark-border: #000000;
-        --bg-color: #d1d1d1;
-}
-
 * {
         box-sizing: border-box;
 }
@@ -29,6 +23,7 @@ body, html {
         background-size:cover;
         font-family: "Trident9x16";
         font-size: 1.2em;
+        color: var(--fg-color);
 }
 
 /*
@@ -43,7 +38,6 @@ body, html {
         display: flex;
         flex-direction: column;
         background-color: var(--bg-color);
-        /* box-shadow: 8px 8px #00000050; */
 }
 
 /*
@@ -125,7 +119,7 @@ body, html {
 #topbar {
         background: linear-gradient(270deg,rgba(46, 154, 255, 1) 0%, rgba(0, 19, 189, 1) 100%);
         /* background-color: #002cde; */
-        color: white;
+        color: var(--topbar-fg-color);
         margin: 4px;
         display: flex;
         flex-direction: row;
@@ -200,9 +194,7 @@ h1 {
 /*
  Underline element
 */
-Underline {
-        text-decoration: underline;
-}
+Underline { text-decoration: underline; }
 
 /*
  * full width
