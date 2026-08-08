@@ -27,6 +27,11 @@ body, html {
 }
 
 /*
+ * link styles
+*/
+a { color: var(--link); }
+
+/*
  * the entire window's settings
 */
 #window {
@@ -132,6 +137,11 @@ body, html {
 #left-topbar {
         flex: 1;
 }
+
+/*
+ * links
+*/
+#left-topbar > a { color: var(--topbar-link); }
 
 /*
  * the right topbar is a horizontal container
