@@ -7,6 +7,9 @@
         {% else %}
                 <link href="/css/themes/primary.css" rel="stylesheet" type="text/css" />
         {% endif %}
+        {% if page.style %}
+                <link href="{{ page.style }}" rel="stylesheet" type="text/css" />
+        {% endif %}
         <link href="/css/default.css" rel="stylesheet" type="text/css" />
 </head>
 

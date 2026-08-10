@@ -1,0 +1,21 @@
+
+.track {
+        width: auto;
+        max-width: 700px;
+        overflow: hidden;
+}
+
+.track iframe {
+        display: block;
+}
+
+.tracklist>.track {
+        margin-bottom: 16px;
+}
+
+.music-year {
+        margin-top: 0px;
+}
+.music-title {
+        margin-bottom: 4px;
+}
