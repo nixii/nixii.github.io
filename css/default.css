@@ -92,12 +92,30 @@ a { color: var(--link); }
 }
 
 /*
- * the right side takes the most space
+ * whole right
 */
 #right {
         flex: 1;
+        overflow-y: 0;
+        display: flex;
+        flex-direction: column;
+}
+
+/*
+ * bottom links section
+*/
+#links {
+        padding: 16px;
+}
+
+/*
+ * the right side takes the most space
+*/
+#rightcontainer {
+        flex: 1;
         min-height: 0;
         overflow-y: scroll;
+        padding: 4px;
 
         /* scrollbar (firefox) */
         scrollbar-width: auto;
@@ -107,19 +125,19 @@ a { color: var(--link); }
 /*
  * chrome scrollbar
 */
-#right::-webkit-scrollbar {
+#rightcontainer::-webkit-scrollbar {
         width: 8px;
 }
-#right::-webkit-scrollbar-track {
+#rightcontainer::-webkit-scrollbar-track {
         background-color: var(--bg-color);
 }
-#right::-webkit-scrollbar-thumb {
+#rightcontainer::-webkit-scrollbar-thumb {
         background-color: var(--bg-color);
 }
-#right::-webkit-scrollbar-button {
+#rightcontainer::-webkit-scrollbar-button {
         display: none;
 }
-#right::-webkit-scrollbar-corner {
+#rightcontainer::-webkit-scrollbar-corner {
         background-color: var(--bg-color);
 }
 
@@ -284,4 +302,19 @@ Italic { font-style: italic; }
         content: "";
         clear: both;
         display: table;
+}
+
+#bucketring {
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+        padding: 4px;
+}
+#bucketring-links a {
+        font-size: 130%;
+        width: 100%;
+}
+#bucketring-links {
+        display: flex;
+        justify-content: center;
 }

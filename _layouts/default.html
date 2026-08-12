@@ -38,9 +38,22 @@
         <a href="/music" class="button-border">My Music</a>
         <a href="/books" class="button-border">Books I've Read</a>
 </div>
-<div id="right" class="inset">
-        {{ page.content }}
-</div>
+<div id="right">
+        <div id="rightcontainer" class="inset">
+                {{ page.content }}
+                <br>
+                <h1 class="inset">Links</h1>
+                <div id="links" class="outset">
+                        <div id="bucketring" class="inset">
+                                <a href="https://webring.bucketfish.me">Bucketfish Webring</a>
+                                <div id="bucketring-links">
+                                        <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=Nixii"><</a>
+                                        <a href="https://webring.bucketfish.me/redirect.html?to=random&name=Nixii">?</a>
+                                        <a href="https://webring.bucketfish.me/redirect.html?to=next&name=Nixii">></a>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
 
 
